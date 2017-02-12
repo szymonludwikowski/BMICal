@@ -8,7 +8,7 @@ public class Main {
 		double weight;
 		double height;
 		double bmi;
-		
+
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("Input weight in kilograms: ");
@@ -19,8 +19,15 @@ public class Main {
 
 		bmi = weight / (height * height);
 
-		System.out.print("Your BMI is equal to: " + bmi);
-						
+		System.out.println("Your BMI is equal to: " + bmi);
+
+		if (bmi < 18.5) {
+			System.out.println("Underweight");
+		} else if (bmi < 18.5 && bmi > 23) {
+			System.out.println("Normal weight");
+		} else {
+			System.out.println("Overweight");
+		}
 	}
 
 }
